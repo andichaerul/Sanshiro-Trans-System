@@ -250,6 +250,7 @@ class Admin extends CI_Controller{
 	function aktivkan_jadwal(){
 		$this->m_login->aktiv_jadwal_insert();
 		redirect($_SERVER['HTTP_REFERER']);
+		
 	}
 
 

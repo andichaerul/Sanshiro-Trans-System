@@ -284,14 +284,18 @@ class M_login extends CI_Model{
         $this->db->update('jadwal_perjalanan', $data);   
 	}
 	function aktiv_jadwal_insert(){
-		$code =$this->input->get('aktiv');
+		
+		$kode = $this->input->get('no_kode');
+		$kodeperjalanan = $this->input->get('kodeperjalanan');
+		for ($i= 0; $i < count($kode); $i++) {
 		$data = array(
-			    'status'=>'checked',
-			    );
-		for ($i=0; $i < count($code); $i++) { 
-			$this->db->where('kode_perjalanan', $code[$i]);
+			    'status'=> isset($_GET['aktiv'][$i]) ? $_GET['aktiv'][$i] : "false",
+			    ); 
+			$this->db->where('no_kode', $kode[$i]);
+			$this->db->where('kode_perjalanan', $kodeperjalanan[$i]);
 			$this->db->update('jadwal_perjalanan', $data);  
 		};
+		print_r($kodeperjalanan);
         
 
 	}

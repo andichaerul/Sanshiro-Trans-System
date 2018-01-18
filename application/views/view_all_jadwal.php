@@ -1,20 +1,26 @@
 <?php foreach ($vial as $key) {
 	# code...
 };?>
+<form method="get" action="aktivkan_jadwal">
 <div ng-app="myApp" class="container-fluid">
   <div class="row">
     <div class="col-md-12" ng-controller="demoController as demo">
       <h3>ngTable directive</h3>
+      <input type="submit" name="" value="Submit">
       <table ng-table="demo.tableParams" class="table table-condensed table-bordered table-striped">
         <tr ng-repeat="row in $data">
           <td data-title="'Status'" filter="{name: 'text'}">
-          <input type="checkbox" value="{{row.kodeperjalanan}}" name="aktiv[]" class="check" {{row.status}}>
-          {{row.status}} 
+           
+          <input type="checkbox" value="true" name="aktiv[]" ng-checked="{{row.status}}">
+
+          <input type="" name="kodeperjalanan[]" value="{{row.kodeperjalanan}}">
+          <input type="" name="no_kode[]" value="{{row.kode}}">
+          {{row.status}}
           </td>
           <td data-title="'Tgl'" filter="{tgl: 'text'}">{{row.tgl}}</td>
           <td data-title="'Kelas Bus'">{{row.kelas}}</td>
-          <td data-title="'Jam Start'" filter="{ jam start: 'select'}" filter-data="demo.countries">{{row.jamstart}}</td>
-          <td data-title="'Durasi'" filter="{durasi: 'date'}">{{row.durasi}}</td>
+          <td data-title="'Jam Start'" filter="{ jamstart: 'text'}">{{row.jamstart}}</td>
+          <td data-title="'Durasi'" filter="{durasi: 'text'}">{{row.durasi}}</td>
           <td data-title="'Jam Tiba'" filter="{jamtiba: 'text'}">{{row.jamtiba}}</td>
           <td data-title="'Via'" filter="{age: 'number'}">{{row.via}}</td>
           <td data-title="'Seat Layout'" filter="{age: 'number'}">{{row.seat}}</td>
@@ -25,6 +31,7 @@
     </div>
   </div>
 </div>
+</form>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js'></script>
   <script src='https://unpkg.com/ng-table/bundles/ng-table.min.js'></script>
 
@@ -76,7 +83,7 @@
 
   function dataFactory() {
     return [<?php foreach ($vial as $row) {
-echo "{'status':'".$row->status."','tgl':'".longdate_indo($row->tanggal_start)."','kelas':'".$row->kelas."','jamstart':'".date('g:i A',strtotime($row->jam_start))."','durasi':'".date('g:i',strtotime($row->durasi))."','jamtiba':'".date('g:i A',strtotime($row->jam_tiba))."','via':'".$row->via."','seat':'".$row->ket."','pax':'".$row->total."','harga':'".rp($row->harga)."','kodeperjalanan':'".$row->kode_perjalanan."'},";
+echo "{'status':'".$row->status."','tgl':'".longdate_indo($row->tanggal_start)."','kelas':'".$row->kelas."','jamstart':'".date('g:i A',strtotime($row->jam_start))."','durasi':'".date('g:i',strtotime($row->durasi))."','jamtiba':'".date('g:i A',strtotime($row->jam_tiba))."','via':'".$row->via."','seat':'".$row->ket."','pax':'".$row->total."','harga':'".rp($row->harga)."','kodeperjalanan':'".$row->kode_perjalanan."','kode':'".$row->no_kode."'},";
 } ?>];
   }
 })();
