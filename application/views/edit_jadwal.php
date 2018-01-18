@@ -2,7 +2,7 @@
 }?>
 
 
-<div class="container-fluid">
+<div class="container-fluid"><div class="testing">bushand</div>
 	<div class="row">
 		<div class="col-md-12">Edit trip</div>
 		<div class="col-md-12">
