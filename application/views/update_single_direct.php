@@ -1,0 +1,1 @@
+<script>alert('Berhasil Update jadwal');history.go(-2) </script>;

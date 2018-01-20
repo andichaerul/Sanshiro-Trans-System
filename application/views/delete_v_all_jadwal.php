@@ -1,0 +1,1 @@
+<script>alert('Berhasil menghapus jadwal');history.go(-1) </script>;

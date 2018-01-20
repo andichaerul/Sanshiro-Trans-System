@@ -1,0 +1,108 @@
+input[type=checkbox] {
+display:none;
+}
+ 
+input[type=checkbox] + label
+{background: url("http://localhost/tiket-bus/front/media/img/available_seat.png") no-repeat;height: 20px;width: 20px;display:inline-block;padding: 0px;/* border-style: solid; */border-width: 1px;margin: 4px;}
+
+input[type=checkbox]:checked + label
+{background: url("http://localhost/tiket-bus/front/media/img/seat_select.png") no-repeat;height: 20px;width: 20px;display:inline-block;padding: 0 0 0 0px;}
+
+input[type=checkbox]:disabled + label
+{background: url("http://localhost/tiket-bus/front/media/img/booked.png") no-repeat;height: 20px;width: 20px;display:inline-block;padding: 0 0 0 0px;}
+/*tambahan posisi*/
+.table-seat {
+    float: left;
+    /* width: 60%; */
+    padding: 50px;
+    /* margin: 10px; */
+    border-style: solid;
+    border-color: #dededf;
+    border-width: 1px;
+    border-left-width: 4px;
+    border-left-color: #e24648;
+}
+
+.sopir {
+    float: left;
+    margin-right: 12px;
+}
+
+.bus-table10 {
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-color: #dededf;
+    border-width: 1px;
+    margin-bottom: 12px;
+    border-style: solid;
+    border-radius: 5px;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.keterangan-seat {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.soapsub {
+    margin-bottom: 13px;
+    float: left;
+    margin-left: 12px;
+}
+
+span.text-keterangan {
+    margin-left: 10px;
+}
+
+.result-your-select-destinasi {
+    float: left;
+    width: 100%;
+    /* margin: 10px; */
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dededf;
+    border-left-width: 4px;
+    border-left-color: #e24648;
+}
+
+
+.head-detail-perjalanan {
+    height: 40px;
+    line-height: 40px;
+    border-bottom-style: solid;
+    margin-bottom: 12px;
+    border-width: 1px;
+    font-size: 20px;
+    font-weight: bold;
+}
+td.no {
+    visibility: hidden;
+}
+.row.plats {
+    margin-top: 90px;
+}
+
+.formxxhidden {
+    text-align: right;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+input.buttonnext {
+    width: 170px;
+    background: #e24648;
+    color: white;
+    border-style: none;
+    height: 40px;
+    margin-top: 35px;
+}
+.col-md-4.col-sm-11.ket {
+    margin-bottom: 10px;
+}
+
+.row.col-md-12.col-sm-12.ket-seat-class {
+    font-size: 11px;
+}
